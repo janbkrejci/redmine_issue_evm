@@ -44,7 +44,7 @@ var myChart = new Chart(ctx, {
                 time: {
                     unit: "day",
                     displayFormats: {
-                        day: "MMM D"
+                        day: "D.M.Y"
                     }
                 },
                 distribution: "linear",
@@ -72,7 +72,7 @@ var myChart = new Chart(ctx, {
             callbacks: {
                 title: function (tooltipItem, data){
                     var title = new Date(Date.parse(tooltipItem[0].xLabel));
-                    return title.toDateString();
+                    return title.toLocaleDateString();
                 }
             }
         },

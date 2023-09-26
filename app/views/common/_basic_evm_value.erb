@@ -1,7 +1,7 @@
 <table id="evm-indicator-value-table" border="1" bordercolor = "#bbb">
   <tr>
     <th>BAC</th>
-    <th>Complete EV</th>
+    <th>EV %</th>
     <th>PV</th>
     <th>EV</th>
     <th>AC</th>
@@ -11,13 +11,13 @@
     <th>CPI</th>
   </tr>
   <tr>
-    <td><%= evm.bac %></td>
+    <td><%= number_with_precision(evm.bac, delimiter: " ", precision: 0) %></td>
     <td><%= evm.complete_ev %></td>
-    <td><%= evm.today_pv %></td>
-    <td><%= evm.today_ev %></td>
-    <td><%= evm.today_ac %></td>
-    <td><%= evm.today_sv %></td>
-    <td><%= evm.today_cv %></td>
+    <td><%= number_with_precision(evm.today_pv, delimiter: " ", precision: 0) %></td>
+    <td><%= number_with_precision(evm.today_ev, delimiter: " ", precision: 0) %></td>
+    <td><%= number_with_precision(evm.today_ac, delimiter: " ", precision: 0) %></td>
+    <td><%= number_with_precision(evm.today_sv, delimiter: " ", precision: 0) %></td>
+    <td><%= number_with_precision(evm.today_cv, delimiter: " ", precision: 0) %></td>
     <%= performance_indicator(evm.today_spi, cfg_param[:limit_spi]) %>
     <%= performance_indicator(evm.today_cpi, cfg_param[:limit_cpi]) %>
   </tr>

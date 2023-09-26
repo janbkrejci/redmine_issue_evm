@@ -44,7 +44,7 @@ var myChart = new Chart(ctx, {
                 time: {
                     unit: "day",
                     displayFormats: {
-                        day: "MMM D"
+                        day: "D.M.Y"
                     }
                 },
                 distribution: "linear",
@@ -60,8 +60,13 @@ var myChart = new Chart(ctx, {
                     drawBorder: false
                 },
                 ticks: {
-                    min: 0,
+                    callback: function(value, index, ticks) {
+                        return value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ") + " tis. Kč";
+                    }
                 }
+                /*ticks: {
+                    min: 0,
+                }*/
             }]
         },
         legend: {
@@ -74,7 +79,7 @@ var myChart = new Chart(ctx, {
             callbacks: {
                 title: function (tooltipItem, data){
                     var title = new Date(Date.parse(tooltipItem[0].xLabel));
-                    return title.toDateString();
+                    return title.toLocaleDateString();
                 }
             }
         },

@@ -62,7 +62,7 @@ var myChart = new Chart(ctx, {
             backgroundColor: "rgba(0, 0, 0, 0)",
             fill: false
         },{
-            label: "Daily EAC",
+            label: "EAC denní",
             type: "line",
             spanGaps: true,
             data: <%= chart_data[:eac_daily] %>,
@@ -86,7 +86,7 @@ var myChart = new Chart(ctx, {
             backgroundColor: "rgba(0, 0, 0, 0)",
             fill: false
         },{
-            label: "AC Forecast",
+            label: "AC předpověď",
             type: "line",
             spanGaps: true,
             data: <%= chart_data[:ac_forecast] %>,
@@ -98,7 +98,7 @@ var myChart = new Chart(ctx, {
             backgroundColor: "rgba(0, 0, 0, 0)",
             fill: false
         },{
-            label: "EV Forecast",
+            label: "EV předpověď",
             type: "line",
             spanGaps: true,
             data: <%= chart_data[:ev_forecast] %>,
@@ -110,7 +110,7 @@ var myChart = new Chart(ctx, {
             backgroundColor: "rgba(0, 0, 0, 0)",
             fill: false
         },{
-            label: "PV Daily",
+            label: "PV denní",
             data: <%= chart_data[:pv_daily] %>,
             steppedLine: "true",
             borderWidth: 1,
@@ -126,7 +126,7 @@ var myChart = new Chart(ctx, {
                 time: {
                     unit: "day",
                     displayFormats: {
-                        day: "MMM D"
+                        day: "D.M.Y"
                     }
                 },
                 distribution: "linear",
@@ -143,8 +143,13 @@ var myChart = new Chart(ctx, {
                     drawBorder: false
                 },
                 ticks: {
-                    min: 0,
+                    callback: function(value, index, ticks) {
+                        return value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ") + " tis. Kč";
+                    }
                 }
+                /*ticks: {
+                    min: 0,
+                }*/
             }]
         },
         legend: {
@@ -157,7 +162,7 @@ var myChart = new Chart(ctx, {
             callbacks: {
                 title: function (tooltipItem, data){
                     var title = new Date(Date.parse(tooltipItem[0].xLabel));
-                    return title.toDateString();
+                    return title.toLocaleDateString();
                 }
             }
         },

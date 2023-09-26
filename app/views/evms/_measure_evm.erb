@@ -9,7 +9,7 @@
     </tr>
     <tr>
       <th>BAC</th>
-      <th>Complete EV</th>
+      <th>EV %</th>
       <th>PV</th>
       <th>EV</th>
       <th>AC</th>
@@ -24,14 +24,14 @@
       <th>TCPI</th>
     </tr>
     <tr>
-      <td rowspan="2"><%=project_evm.basis_date%></td>
-      <td id="BAC_HOURS"><%=project_evm.bac%></td>
+      <td><%= format_date(project_evm.basis_date) %></td>
+      <td id="BAC_HOURS"><%= number_with_precision(project_evm.bac, delimiter: " ", precision: 0) %></td>
       <td><%=project_evm.complete_ev%> %</td>
-      <td id="PV_HOURS"><%=project_evm.today_pv%></td>
-      <td id="EV_HOURS"><%=project_evm.today_ev%></td>
-      <td id="AC_HOURS"><%=project_evm.today_ac%></td>
-      <td id="SV_HOURS"><%=project_evm.today_sv%></td>
-      <td id="CV_HOURS"><%=project_evm.today_cv%></td>
+      <td id="PV_HOURS"><%= number_with_precision(project_evm.today_pv, delimiter: " ", precision: 0) %></td>
+      <td id="EV_HOURS"><%= number_with_precision(project_evm.today_ev, delimiter: " ", precision: 0) %></td>
+      <td id="AC_HOURS"><%= number_with_precision(project_evm.today_ac, delimiter: " ", precision: 0) %></td>
+      <td id="SV_HOURS"><%= number_with_precision(project_evm.today_sv, delimiter: " ", precision: 0) %></td>
+      <td id="CV_HOURS"><%= number_with_precision(project_evm.today_cv, delimiter: " ", precision: 0) %></td>
       <%=performance_indicator(project_evm.today_spi, cfg_param[:limit_spi])%>
       <%=performance_indicator(project_evm.today_cpi, cfg_param[:limit_cpi])%>
       <%=performance_indicator(project_evm.today_cr, cfg_param[:limit_cr])%>
@@ -40,14 +40,15 @@
       <%=forecast_value_finished(project_evm.finished_date, project_evm.vac)%>
       <%=forecast_value_finished(project_evm.finished_date, project_evm.tcpi)%>
     </tr>
-    <tr>
-      <td><%=project_evm.bac(cfg_param[:working_hours])%></td>
+    <!-- tr>
+      <td><%= format_date(project_evm.basis_date) %></td>
+      <td><%= number_with_precision(project_evm.bac(cfg_param[:working_hours]), delimiter: " ", precision: 0) %></td>
       <td><%=project_evm.complete_ev(cfg_param[:working_hours])%> %</td>
-      <td><%=project_evm.today_pv(cfg_param[:working_hours])%></td>
-      <td><%=project_evm.today_ev(cfg_param[:working_hours])%></td>
-      <td><%=project_evm.today_ac(cfg_param[:working_hours])%></td>
-      <td><%=project_evm.today_sv(cfg_param[:working_hours])%></td>
-      <td><%=project_evm.today_cv(cfg_param[:working_hours])%></td>
+      <td><%= number_with_precision(project_evm.today_pv(cfg_param[:working_hours]), delimiter: " ", precision: 0) %></td>
+      <td><%= number_with_precision(project_evm.today_ev(cfg_param[:working_hours]), delimiter: " ", precision: 0) %></td>
+      <td><%= number_with_precision(project_evm.today_ac(cfg_param[:working_hours]), delimiter: " ", precision: 0) %></td>
+      <td><%= number_with_precision(project_evm.today_sv(cfg_param[:working_hours]), delimiter: " ", precision: 0) %></td>
+      <td><%= number_with_precision(project_evm.today_cv(cfg_param[:working_hours]), delimiter: " ", precision: 0) %></td>
       <%=performance_indicator(project_evm.today_spi(cfg_param[:working_hours]), cfg_param[:limit_spi])%>
       <%=performance_indicator(project_evm.today_cpi(cfg_param[:working_hours]), cfg_param[:limit_cpi])%>
       <%=performance_indicator(project_evm.today_cr(cfg_param[:working_hours]), cfg_param[:limit_cr])%>
@@ -55,7 +56,8 @@
       <%=forecast_value_finished(project_evm.finished_date, project_evm.etc(cfg_param[:working_hours]))%>
       <%=forecast_value_finished(project_evm.finished_date, project_evm.vac(cfg_param[:working_hours]))%>
       <%=forecast_value_finished(project_evm.finished_date, project_evm.tcpi(cfg_param[:working_hours]))%>
-    </tr>
+    </tr -->
   </table>
-  <p><%= l(:explanation_upper_row)%> <%= l(:explanation_lower_row)%></p>
+  <!-- p><%= l(:explanation_upper_row)%> <%= l(:explanation_lower_row)%></p -->
+  <p><%= l(:explanation_lower_row)%></p>
 </section>

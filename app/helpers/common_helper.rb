@@ -42,7 +42,7 @@ module CommonHelper
   # @return [String] html
   def forecast_value_finished(finished_date, evm_value)
     value = finished_date.nil? ? evm_value : "-"
-    tag.td(value)
+    tag.td(number_with_precision(value, delimiter: " ", precision: 0))
   end
 
   # Get annotationlabel

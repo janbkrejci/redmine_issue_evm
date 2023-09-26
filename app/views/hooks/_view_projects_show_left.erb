@@ -6,7 +6,7 @@
     </p>
   <% else %>
     <ul>
-      <li><%= l(:indicator_table_header_date)%>: <%= evm.basis_date %></li>
+      <li><%= l(:indicator_table_header_date)%>: <%= format_date(evm.basis_date) %></li>
       <li><%= l(:label_baseline) %>: <%= baseline_subject %></li>
     </ul>
     <table id='evm-indicator-value-table' border='1' bordercolor = '#bbb'>
@@ -21,16 +21,16 @@
         <th>CPI</th>
       </tr>
       <tr>
-        <td><%= evm.bac %></td>
-        <td><%= evm.today_pv %></td>
-        <td><%= evm.today_ev %></td>
-        <td><%= evm.today_ac %></td>
-        <td><%= evm.today_sv %></td>
-        <td><%= evm.today_cv %></td>
+        <td><%= number_with_precision(evm.bac, delimiter: " ", precision: 0) %></td>
+        <td><%= number_with_precision(evm.today_pv, delimiter: " ", precision: 0) %></td>
+        <td><%= number_with_precision(evm.today_ev, delimiter: " ", precision: 0) %></td>
+        <td><%= number_with_precision(evm.today_ac, delimiter: " ", precision: 0) %></td>
+        <td><%= number_with_precision(evm.today_sv, delimiter: " ", precision: 0) %></td>
+        <td><%= number_with_precision(evm.today_cv, delimiter: " ", precision: 0) %></td>
         <td><%= evm.today_spi %></td>
         <td><%= evm.today_cpi %></td>
       </tr>
-      <tr>
+      <!-- tr>
         <td><%= evm.bac(working_hours) %></td>
         <td><%= evm.today_pv(working_hours) %></td>
         <td><%= evm.today_ev(working_hours) %></td>
@@ -39,10 +39,10 @@
         <td><%= evm.today_cv(working_hours) %></td>
         <td><%= evm.today_spi(working_hours) %></td>
         <td><%= evm.today_cpi(working_hours) %></td>
-      </tr>
+      </tr -->
     </table>
     <p>
-      <%= l(:explanation_upper_row) %> <%= l(:explanation_lower_row) %>
+      <!-- %= l(:explanation_upper_row) % --> <%= l(:explanation_lower_row) %>
     </p>
   <% end %>
 </div>

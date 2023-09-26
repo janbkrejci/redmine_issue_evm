@@ -23,8 +23,8 @@
   subtitle_evm_modify_issues: Změněné úkoly
   subtitle_evm_new_issues: Nové úkoly
   subtitle_evm_remove_issues: Odstraněné úkoly
-  subtitle_evm_chart_main: Grafy EVM
-  subtitle_evm_chart_performance: Grafy výkonnosti
+  subtitle_evm_chart_main: Graf EVM
+  subtitle_evm_chart_performance: Graf výkonnosti
 
   # Indicator project metrics
   Indicator_metrics: Přehled
@@ -55,9 +55,9 @@
   indicator_table_header_forecast: Předpověď
 
   # Indicator table legend
-  explanation_upper_row: Horní řádek jsou hodiny.
-  explanation_lower_row: Spodní řádek jsou dny.
-  explanation_es_unit: Hodnoty jsou uvedeny ve dnech
+  explanation_upper_row: Hodnoty jsou uvedeny v tis. Kč.
+  explanation_lower_row: Hodnoty jsou uvedeny v tis. Kč.
+  explanation_es_unit: Hodnoty jsou uvedeny ve dnech.
 
   # Option - common
   label_basis_date: Datum reportu
@@ -107,7 +107,7 @@
   label_setting_create: Vytvořte nastavení EVM
   label_setting_edit: Upravte nastavení EVM
   label_setting_set: Nastavení EVM
-  label_basis_hours_of_day: Základní počet hodin denně
+  label_basis_hours_of_day: Dělitel nákladů (1000)
   label_evm_graph: Graf
   label_limit_spi: SPI práh.
   label_limit_cpi: CPI práh.
@@ -143,16 +143,16 @@
   # Explanation
   explanation_bac: Celkový rozpočet (náklady) projektu.
   explanation_sac: Původně plánovaná délka projektu ve dnech.
-  explanation_pv: Celková cena plánované práce k datu reportu.
-  explanation_ev: Celková cena odvedené práce k datu reportu. Řídí se podle okamžiku, kdy byl u úkolu změněn údaj Hotovo %.
-  explanation_es: Kdy má/mělo být podle plánu odvedeno současné množství práce? (Počet dní od začátku projektu)
+  explanation_pv: Celkové plánované náklady k datu reportu.
+  explanation_ev: Celková vytvořená hodnota k datu reportu. Řídí se podle okamžiku, kdy byl u úkolu změněn údaj Hotovo %.
+  explanation_es: Kdy má/měla být podle plánu vytvořena aktuální hodnota? (Počet dní od začátku projektu)
   explanation_ac: Celkové náklady k datu reportu.
   explanation_at: Počet dní od začátku projektu do data reportu.
   explanation_sv: Jsme před (+), nebo za (-) plánem?
   explanation_cv: Jsme pod (+), nebo nad (-) plánovanými náklady?
   explanation_tv: O kolik dní jsme napřed (-), nebo pozadu (-) oproti plánu?
   explanation_spi: Hodnota nad 1 znamená, že tým je efektivnější ve využití přiděleného času, pod 1 je naopak méně efektivní, než byl plán.
-  explanation_cpi: Hodnota nad 1 znamená, že využití zdrojů je lepší, než plánované. Pod 1 naopak horší.
+  explanation_cpi: Hodnota nad 1 znamená, že využití nákladů je lepší, než plánované. Pod 1 naopak horší.
   explanation_cr: Celková výkonnost projektu = SPI * CPI
   explanation_tpi: Index časové výkonnosti. Nad 1 jsme před plánem, pod 1 za plánem.
   explanation_complete: Procento dokončení plánované k datu reportu.
@@ -180,4 +180,4 @@
 
   # EVM of assignee
   no_assignee: Nepřiděleno
-  estimated_working_hours: Předpokládaný počet hodin
+  estimated_working_hours: Předpokládané náklady
