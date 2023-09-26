@@ -75,6 +75,9 @@
   label_select_assignee: Vyberte odpovědné osoby
   # Option - versions
   label_select_version: Vyberte verze
+  # Overview page
+  label_no_evm_setting: Nejprve musíte vytvořit nastavení pro EVM, klikněte na EVM v horním menu.
+
 
   # report page
   label_report_show: Detail reportu
@@ -150,7 +153,7 @@
   explanation_at: Počet dní od začátku projektu do data reportu.
   explanation_sv: Jsme před (+), nebo za (-) plánem?
   explanation_cv: Jsme pod (+), nebo nad (-) plánovanými náklady?
-  explanation_tv: O kolik dní jsme napřed (-), nebo pozadu (-) oproti plánu?
+  explanation_tv: O kolik dní jsme napřed (+), nebo pozadu (-) oproti plánu?
   explanation_spi: Hodnota nad 1 znamená, že tým je efektivnější ve využití přiděleného času, pod 1 je naopak méně efektivní, než byl plán.
   explanation_cpi: Hodnota nad 1 znamená, že využití nákladů je lepší, než plánované. Pod 1 naopak horší.
   explanation_cr: Celková výkonnost projektu = SPI * CPI
