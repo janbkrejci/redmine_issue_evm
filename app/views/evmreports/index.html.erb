@@ -28,12 +28,12 @@
         <% @evm_report.each do |report| %>
           <tr class="baseline">
             <td class="status_date"><%= format_date(report.status_date) %></td>
-            <td class="bac"><%= report.evm_bac %></td>
-            <td class="pv"><%= report.evm_pv %></td>
-            <td class="ev"><%= report.evm_ev %></td>
-            <td class="ac"><%= report.evm_ac %></td>
-            <td class="sv"><%= report.evm_sv %></td>
-            <td class="cv"><%= report.evm_cv %></td>
+            <td class="bac"><%= number_with_precision(report.evm_bac, delimiter: " ", precision: 0) %></td>
+            <td class="pv"><%= number_with_precision(report.evm_pv, delimiter: " ", precision: 0) %></td>
+            <td class="ev"><%= number_with_precision(report.evm_ev, delimiter: " ", precision: 0) %></td>
+            <td class="ac"><%= number_with_precision(report.evm_ac, delimiter: " ", precision: 0) %></td>
+            <td class="sv"><%= number_with_precision(report.evm_sv, delimiter: " ", precision: 0) %></td>
+            <td class="cv"><%= number_with_precision(report.evm_cv, delimiter: " ", precision: 0) %></td>
             <td class="created_on"><%= format_time(report.created_on) %></td>
             <td class="updated_on"><%= format_time(report.updated_on) %></td>
             <td class="buttons">

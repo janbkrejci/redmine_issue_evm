@@ -9,6 +9,7 @@
   label_nav_parent_issue: Rodičovské úkoly
   label_nav_tracker: Fronty
   label_nav_exclude: Nezahrnuté úkoly
+  label_nav_ev_editor: Úprava EV
   label_nav_baseline_setting: Nastavení Baseline
   label_nav_evm_setting: Obecná nastavení
   label_nav_report: Report projektu
@@ -88,7 +89,7 @@
   label_report_text: Detaily reportu
   label_report_evm_previous: Minulé hodnoty EVM
   label_report_evm_report: EVM k datu
-  label_report_evm_difference: Rozdíl mezi minulými a aktuálními hodnotami
+  label_report_evm_difference: Rozdíl
 
   # baseline page
   label_baseline: Název Baseline

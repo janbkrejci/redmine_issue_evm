@@ -352,9 +352,10 @@ module CalculateEvmLogic
     # @return [date] rest days
     def rest_days(pv_value, ev_value, spi_value, basis_hours)
       if spi_value == 0
-        return  ((pv_value - ev_value) / basis_hours).round(0)
+        ((pv_value - ev_value) / 1000000).round(0)
+      else
+        ((pv_value - ev_value) / spi_value / 1000000).round(0)
       end
-      ((pv_value - ev_value) / spi_value / basis_hours).round(0)
     end
 
     # Check finished date
