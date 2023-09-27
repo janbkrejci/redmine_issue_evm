@@ -31,7 +31,7 @@
   Indicator_metrics: Přehled
   indicator_duration: Plánované trvání
   indicator_status: Stav
-  indicator_difference: Zbývá pracovních dní
+  indicator_difference: Zbývá kalendářních dní
   indicator_target_issues_count: Počet zařazených úkolů
   indicator_baseline_variance: Odchylky od Baseline
   indicator_bac: Celkový rozpočet
