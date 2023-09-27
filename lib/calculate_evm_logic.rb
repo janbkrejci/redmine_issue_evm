@@ -351,6 +351,9 @@ module CalculateEvmLogic
     # @param [Numeric] basis_hours hours of per day is plugin setting
     # @return [date] rest days
     def rest_days(pv_value, ev_value, spi_value, basis_hours)
+      if spi_value == 0
+        return  ((pv_value - ev_value) / basis_hours).round(0)
+      end
       ((pv_value - ev_value) / spi_value / basis_hours).round(0)
     end
 
