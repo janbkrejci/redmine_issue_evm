@@ -1,0 +1,17 @@
+<% html_title("Historie EV") %>
+<h2><%= l(:title_evm_tab) %></h2>
+<h3><%= l(:label_ev_create) %></h3>
+<%= form_for @details, url: {action: :show, method: :get} do |f| %>
+  <div class="box tabular">
+    <p>
+      <%= f.label :subject %>
+      <%= f.text_field :subject, size: 60, readonly: true %>
+    </p>
+    <p>
+      <%= f.label :based_on, l(:label_based_on) %>
+      <%= f.date_field :based_on, size: 8, readonly: true %><%= calendar_for(:based_on) %>
+    </p>
+    <%= wikitoolbar_for "evmbaseline_description" %>
+  </div>
+  <%= link_to l(:button_back), { controller: :evmhistory, action: :edit, id: @issue.id } %>
+<% end %>

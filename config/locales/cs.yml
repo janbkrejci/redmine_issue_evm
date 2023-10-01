@@ -4,12 +4,12 @@
 
   # contextual menu
   label_nav_main: Projekt
-  label_nav_version: Verze
+  label_nav_version: Dodávky
   label_nav_assignee: Řešitelé
   label_nav_parent_issue: Rodičovské úkoly
   label_nav_tracker: Fronty
   label_nav_exclude: Nezahrnuté úkoly
-  label_nav_ev_editor: Úprava EV
+  label_nav_ev_editor: Historie EV
   label_nav_baseline_setting: Nastavení Baseline
   label_nav_evm_setting: Obecná nastavení
   label_nav_report: Report projektu
@@ -21,6 +21,7 @@
   subtitle_es_indicator: Harmonogram hodnoty
   subtitle_evm_incomplete_issues: Zpožděné úkoly
   subtitle_evm_exclude_issues: Nezahrnuté úkoly
+  subtitle_evm_edit_ev_history: Historie EV
   subtitle_evm_modify_issues: Změněné úkoly
   subtitle_evm_new_issues: Nové úkoly
   subtitle_evm_remove_issues: Odstraněné úkoly
@@ -32,7 +33,7 @@
   indicator_duration: Plánované trvání
   indicator_status: Stav
   indicator_difference: Zbývá kalendářních dní
-  indicator_target_issues_count: Počet zařazených úkolů
+  indicator_target_issues_count: Počet zahrnutých úkolů
   indicator_baseline_variance: Odchylky od Baseline
   indicator_bac: Celkový rozpočet
   indicator_due_date: Datum dokončení projektu
@@ -75,7 +76,7 @@
   # Option - assignees
   label_select_assignee: Vyberte odpovědné osoby
   # Option - versions
-  label_select_version: Vyberte verze
+  label_select_version: Vyberte dodávku
   # Overview page
   label_no_evm_setting: Nejprve musíte vytvořit nastavení pro EVM, klikněte na EVM v horním menu.
 
@@ -125,10 +126,12 @@
   label_calc_method1: Optimisticky
   label_calc_method2: Normálně
   label_calc_method3: Pesimisticky
+  label_ev_create: Nová hodnota EV
 
   # Message
   message_delete_baseline: Opravdu smazat Baseline?
   message_delete_report: Opravdu smazat report?
+  message_delete_journal: Opravdu smazat záznam z historie?
 
   # Activity page
   label_evmbaseline_plural: Baseline
@@ -185,3 +188,11 @@
   # EVM of assignee
   no_assignee: Nepřiděleno
   estimated_working_hours: Předpokládané náklady
+
+  # fields
+  field_date: Datum
+  field_history_count: Počet záznamů v historii
+
+  #errors
+  error_date: Neplatné datum. Ujistěte se, že datum je v období trvání úkolu.
+  

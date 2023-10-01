@@ -1,0 +1,19 @@
+<% html_title("Historie EV") %>
+<h2><%= l(:title_evm_tab) %></h2>
+<h3><%= l(:label_ev_create) %></h3>
+<%= form_tag "create", method: :put do %>
+<%= hidden_field_tag :issue_id, @issue.id %>
+  <div class="box tabular">
+    <p>
+      <%= label_tag l(:label_date) %>
+      <%= date_field_tag :date %>
+    </p>
+     <p>
+      <%= label_tag l(:field_done_ratio) %>
+      <%= select_tag :value, options_for_select([0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100], 0), width: 20 %>
+    </p>
+    <%= wikitoolbar_for "evmhistory_description" %>
+  </div>
+  <%= submit_tag l(:button_create) %>&emsp;
+  <%= link_to l(:button_back), { controller: :evmhistory, action: :edit, id: @issue.id } %>
+<% end %>

@@ -31,6 +31,8 @@ Redmine::Plugin.register :redmine_issue_evm do
   author_url "https://github.com/momibun926"
   project_module :Issuevm do
     permission :view_evms, evms: :index, require: :member
+    permission :view_evmhistory,
+               evmhistory: %i[index show new create update edit destroy history], require: :member
     permission :manage_evmbaselines,
                evmbaselines: %i[edit destroy new create update index show history]
     permission :view_evmbaselines,
