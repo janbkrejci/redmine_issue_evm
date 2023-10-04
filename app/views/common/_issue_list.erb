@@ -6,13 +6,13 @@
         <th>#</th>
         <th><%=l(:issue_parent_id)%></th>
         <th><%=l(:field_project)%></th>
-        <th><%=l(:field_subject)%></th>
+        <th style="text-align: left"><%=l(:field_subject)%></th>
         <th><%=l(:field_status)%></th>
         <th><%=l(:field_assigned_to)%></th>
         <th><%=l(:field_version)%></th>
         <th><%=l(:field_start_date)%></th>
         <th><%=l(:field_due_date)%></th>
-        <th><%=l(:field_estimated_hours)%></th>
+        <th style="text-align: right"><%=l(:field_estimated_hours)%></th>
       </tr>
     </thead>
     <tbody>
@@ -21,13 +21,13 @@
           <td><%=link_to(issue.id, issue_path(issue))%></td>
           <td><%=issue.parent_id%></td>
           <td><%=issue.project%></td>
-          <td><%=issue.subject%></td>
+          <td style="text-align: left"><%=issue.subject%></td>
           <td><%=issue.status%></td>
           <td><%=issue.assigned_to%></td>
           <td><%=issue.fixed_version%></td>
           <td><%=diff_start_date(issue.start_date, option_value[issue.id])%></td>
           <td><%=diff_due_date(issue.due_date, option_value[issue.id])%></td>
-          <td><%=diff_estimate_hours(issue.estimated_hours, option_value[issue.id])%></td>
+          <td style="text-align: right"><%=diff_estimate_hours(number_with_precision(issue.estimated_hours, delimiter: " ", precision: 0), option_value[issue.id])%></td>
         </tr>
       <% end %>
     </tbody>
