@@ -47,7 +47,7 @@ class EvmhistoryController < BaseevmController
         issue_id = params[:issue_id]
         start_date = issue_id ? Issue.find(issue_id).start_date : nil
         end_date = issue_id ? Issue.find(issue_id).due_date : nil
-        if !start_date || start_date.to_date.iso8601 > params[:date] || params[:date] > end_date.to_date.iso8601
+        if !start_date || start_date.to_date.iso8601 > params[:date] # || params[:date] > end_date.to_date.iso8601
             flash[:error] = l(:error_date)
             redirect_to action: :edit, controller: :evmhistory, id: issue_id, detail_id: detail_id
             return

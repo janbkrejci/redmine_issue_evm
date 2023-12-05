@@ -194,5 +194,6 @@
   field_history_count: Počet záznamů v historii
 
   #errors
-  error_date: Neplatné datum. Ujistěte se, že datum je v období trvání úkolu.
+  error_date: Neplatné datum. Ujistěte se, že datum je větší nebo rovno datu započení úkolu.
+  # v období trvání úkolu.
   
